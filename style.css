@@ -1,3 +1,4 @@
+/* ===== GLOBAL RESET ===== */
 *{
     margin:0;
     padding:0;
@@ -9,6 +10,7 @@ body{
     background:#f4f4f4;
 }
 
+/* ===== HEADER ===== */
 header{
     background:#2e7d32;
     padding:15px 0;
@@ -41,6 +43,7 @@ nav ul li a{
     font-weight:bold;
 }
 
+/* ===== SECTION TITLE ===== */
 .section-title{
     background:#2e7d32;
     color:white;
@@ -48,6 +51,7 @@ nav ul li a{
     margin:20px 0;
 }
 
+/* ===== CARD DESIGN ===== */
 .card{
     background:white;
     padding:20px;
@@ -56,13 +60,16 @@ nav ul li a{
     box-shadow:0 0 10px rgba(0,0,0,0.1);
 }
 
+/* ===== FORM ELEMENTS ===== */
 input, select, textarea{
     width:100%;
     padding:8px;
     margin:8px 0;
     border:1px solid #ccc;
+    border-radius:4px;
 }
 
+/* ===== BUTTON ===== */
 button{
     background:#2e7d32;
     color:white;
@@ -70,12 +77,14 @@ button{
     border:none;
     width:100%;
     cursor:pointer;
+    border-radius:4px;
 }
 
 button:hover{
     background:#1b5e20;
 }
 
+/* ===== PRODUCTS ===== */
 .products{
     display:flex;
     gap:20px;
@@ -88,16 +97,30 @@ button:hover{
     width:200px;
     box-shadow:0 0 5px rgba(0,0,0,0.2);
     text-align:center;
+    border-radius:8px;
 }
 
+.product-card img{
+    width:100%;
+    height:120px;
+    object-fit:cover;
+}
+
+/* ===== TABLE ===== */
 table{
     width:100%;
     border-collapse:collapse;
     background:white;
+    margin-top:20px;
 }
 
 table, th, td{
     border:1px solid #ccc;
+}
+
+th{
+    background:#2e7d32;
+    color:white;
 }
 
 th, td{
@@ -105,14 +128,56 @@ th, td{
     text-align:center;
 }
 
+/* ===== ABOUT PAGE ===== */
+.about-box{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    background:#f9f9f9;
+    padding:30px;
+    margin-top:20px;
+    border:1px solid #ddd;
+    border-radius:10px;
+}
+
+.logo-section{
+    width:30%;
+    text-align:center;
+}
+
+.logo-section img{
+    width:100px;
+}
+
+.about-text{
+    width:70%;
+    text-align:left;
+}
+
+.about-text h2{
+    margin-bottom:10px;
+    color:#2e7d32;
+}
+
+/* ===== FOOTER ===== */
 .footer{
     background:#2e7d32;
     color:white;
-    text-align:center;
-    padding:10px;
+    padding:20px;
     margin-top:30px;
 }
-/* Banner Background */
+
+.footer .container{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+}
+
+.footer h3{
+    margin-bottom:10px;
+}
+
+/* ===== BANNER ===== */
 .banner{
     position:relative;
     background: linear-gradient(rgba(46,125,50,0.7), rgba(46,125,50,0.7)),
@@ -128,7 +193,7 @@ th, td{
     overflow:hidden;
 }
 
-/* Text Animation */
+/* ===== TEXT ANIMATION ===== */
 .fade-in{
     font-size:38px;
     animation:fadeIn 2s ease-in-out;
@@ -151,7 +216,7 @@ th, td{
     }
 }
 
-/* Tractor Animation */
+/* ===== TRACTOR ANIMATION ===== */
 .tractor{
     position:absolute;
     bottom:20px;
@@ -165,5 +230,31 @@ th, td{
     }
     to{
         left:100%;
+    }
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px){
+    .about-box{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .about-text, .logo-section{
+        width:100%;
+        margin:10px 0;
+    }
+
+    nav{
+        flex-direction:column;
+    }
+
+    nav ul{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    nav ul li{
+        margin:10px 0;
     }
 }
